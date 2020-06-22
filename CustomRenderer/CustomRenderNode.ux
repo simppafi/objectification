@@ -1,0 +1,7 @@
+<RenderNode ux:Class="CustomRenderNode" ux:AutoCtor="false">
+
+	<Image File="Sources/fish1.jpg" Visibility="Hidden" ux:Name="OrgImage" Width="1024" Height="1024" />
+
+	<Image File="Sources/fish1_he.jpg" Visibility="Hidden" ux:Name="HeightImage" Width="1024" Height="1024" />
+
+</RenderNode>

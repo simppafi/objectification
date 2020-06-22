@@ -1,0 +1,20 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+        "Fuse",
+        "FuseJS",
+        "Uno.Collections",
+        "Uno.Geometry",
+        "Experimental.Audio",
+        "Uno.Data.Json",
+        "Fuse.Audio"
+  ],
+  "Includes": [
+    "*",
+    //"song.mp3:Bundle",
+   // "Assets/poisson2.bin:Bundle"
+  ],
+  "Projects": [
+    "FuseEntities/Fuse.Entities.unoproj"
+  ],
+}

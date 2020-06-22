@@ -1,0 +1,3 @@
+<Video ux:Class="CustomVideo" ux:AutoCtor="false" ProgressChanged="OnProgressChanged" BoxSizing="Limit" >
+    
+</Video>

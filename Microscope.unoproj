@@ -1,0 +1,86 @@
+{
+  "Name": "Objectification",
+  "Title": "Objectification",
+  "Version": "1.0.0",
+  "VersionCount": 1,
+  "Copyright": "Copyright (C) 2016",
+  "Publisher": "simppafi",
+   "Mobile": {
+    "KeepAlive": false,
+    "RunsInBackground": true,
+    //"Orientations": "Portrait"
+  },
+
+  "RootNamespace":"",
+  "Packages": [
+        "Fuse",
+        "FuseJS",
+        "Uno.Collections",
+        "Uno.Geometry",
+        "Experimental.Audio",
+        "Uno.Data.Json",
+        "Fuse.Audio"
+  ],
+  "Projects": [
+    "CustomRenderer/CustomRenderer.unoproj",
+    "CustomRenderer/FuseEntities/Fuse.Entities.unoproj",
+    "CustomVideo/CustomVideo.unoproj"
+  ],
+  "Includes": [
+    "*",
+    //"CustomRenderer/song.mp3:Bundle",
+    //"js/*.js:Bundle",
+    //"skin/*js:Bundle",
+    //"skin/*/*.png:Bundle"
+  ],
+
+  "Android": {
+  "Key": {
+    "Alias": "vaka",
+    "AliasPassword": "jakaali1",
+    "Store": "release.keystore",
+    "StorePassword": "jakaali1"
+  }
+,  "ApplicationLabel": "Hilda",
+  "VersionCode": "$(VersionCount)",
+  "VersionName": "$(Version)",
+  "Description": "$(Description)",
+  "Icons": {
+    "LDPI": "Assets/android_LDPI.png",
+    "MDPI": "Assets/android_MDPI.png",
+    "HDPI": "Assets/android_HDPI.png",
+    "XHDPI": "Assets/android_XHDPI.png",
+    "XXHDPI": "Assets/android_XXHDPI.png",
+    "XXXHDPI": "Assets/android_XXXHDPI.png"
+  }
+  },
+  "iOS": {
+  "Name": "Hilda",
+  "LaunchImages": {
+      "iPhone_Portrait_2x": "Assets/iPhone_Portrait_2x.png",   // 640x960
+      "iPhone_Portrait_R4": "Assets/iPhone_Portrait_R4.png",   // 640x1136
+      "iPhone_Portrait_R47": "Assets/iPhone_Portrait_R47.png",  // 750x1334
+      "iPhone_Portrait_R55": "Assets/iPhone_Portrait_R55.png",  // 1242x2208
+      "iPhone_Landscape_R55": "Assets/iPhone_Landscape_R55.png", // 2208x1242
+      "iPad_Portrait_1x": "Assets/iPad_Portrait_1x.png",     // 768x1024
+      "iPad_Portrait_2x": "Assets/iPad_Portrait_2x.png",     // 1536x2048
+      "iPad_Landscape_1x": "Assets/iPad_Landscape_1x.png",    // 1024x768
+      "iPad_Landscape_2x": "Assets/iPhone_Portrait_2x.png"     // 2048x1536
+    },
+  "Icons": {
+    "iPhone_29_2x": "Assets/iPhone_29_2x.png",
+    "iPhone_29_3x": "Assets/iPhone_29_3x.png",
+    "iPhone_40_2x": "Assets/iPhone_40_2x.png",
+    "iPhone_40_3x": "Assets/iPhone_40_3x.png",
+    "iPhone_60_2x": "Assets/iPhone_60_2x.png",
+    "iPhone_60_3x": "Assets/iPhone_60_3x.png",
+    "iPad_29_1x": "Assets/iPad_29_1x.png",
+    "iPad_29_2x": "Assets/iPad_29_2x.png",
+    "iPad_40_1x": "Assets/iPad_40_1x.png",
+    "iPad_40_2x": "Assets/iPad_40_2x.png",
+    "iPad_76_1x": "Assets/iPad_76_1x.png",
+    "iPad_76_2x": "Assets/iPad_76_2x.png"
+  }
+  },
+}
+//*/

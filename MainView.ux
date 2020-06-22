@@ -1,0 +1,74 @@
+<App Background="#000" ux:Class="MainView" ux:AutoCtor="false">
+	
+		<!--
+      <Rectangle Fill="#FFFFFF66" Width="1" Height="100" Alignment="Center" />
+      <Rectangle Fill="#FFFFFF66" Width="100" Height="1" Alignment="Center" />
+
+      
+      <Rectangle Fill="#FFFFFF66" Width="1" Height="100%" Offset="61.80339887498547%,0" Alignment="TopLeft" />
+      <Rectangle Fill="#FFFFFF66" Width="100%" Height="1" Offset="0,61.80339887498547%" Alignment="TopLeft" />
+
+      <Rectangle Fill="#FFFFFF66" Width="1" Height="100%" Offset="38.19660112501453%,0" Alignment="TopLeft" />
+      <Rectangle Fill="#FFFFFF66" Width="100%" Height="1" Offset="0,38.19660112501453%" Alignment="TopLeft" />
+      -->
+      <!--
+      <StackPanel Alignment="TopLeft" Margin="40">
+        <Text ux:Name="DataPosID" Value="0" />
+        <Text ux:Name="TimeVal" Value="0" />
+      </StackPanel>
+	-->
+      <!-- <Slider ux:Name="DemoTimeline" Value="0" Minimum="0" Maximum="100000" Alignment="Bottom" Margin="20" /> -->
+<!--
+      <StackPanel Alignment="TopRight" Margin="40">
+        <Text Value="StartCamPoint : J" />
+        <Text Value="EndAndSaveCamPoint : K" />    
+      </StackPanel>
+		-->
+		<Panel Alignment="Center" ux:Name="WaitTxt">
+			  	<Text TextColor="#FFF" Value="Wait." Margin="30,10" />
+			</Panel>
+
+			<Panel Alignment="Center" Pointer.Released="Start" ux:Name="StartBtn" Visibility="Collapsed">
+			  	<Text TextColor="#000" Value="Start" Margin="30,10" />
+			  	<Rectangle Fill="#FFF" CornerRadius="3" />
+			</Panel>
+		<Panel>
+			
+			<!-- <Text Value="fps" TextColor="#FFF" ux:Name="FpsCounter" Alignment="BottomLeft" Margin="10" HitTestMode="None" />-->
+			
+
+			<Image File="Assets/text1.png" StretchMode="UniformToFill" Visibility="Collapsed" Name="text1" />
+			<Image File="Assets/text2.png" StretchMode="UniformToFill" Visibility="Collapsed" Name="text2" />
+			<Image File="Assets/text3.png" StretchMode="UniformToFill" Visibility="Collapsed" Name="text3" />
+
+			<WhileTrue Name="soundfx" Value="false">
+				<PlaySound File="Assets/click.wav" />
+			</WhileTrue>
+			
+		    <Scene Camera="CameraEntity">
+
+				<Entity ux:Name="CameraEntity">
+					<Frustum FovDegrees="120" ZNear="1" ZFar="1500" ux:Name="CameraFrustum" />
+					<Transform3D Position="0, 0, 0" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="CameraTransform" />
+				</Entity>
+
+				<CustomRenderNode ux:Name="MyRenderNode" CameraFrustum="CameraFrustum" CameraTransform="CameraTransform" />
+
+		    </Scene>
+		    
+		    <Panel HitTestMode="LocalBounds" Pointer.Pressed="MyRenderNode.PointerPressed" Pointer.Moved="MyRenderNode.PointerMoved" Pointer.Released="MyRenderNode.PointerReleased" Pointer.WheelMoved="MyRenderNode.PointerWheelMoved"> 
+	          	
+	       	</Panel>
+			
+	  </Panel>
+
+	  
+	  <UserEvent Name="EventProgress" />
+      <OnUserEvent EventName="EventProgress" Handler="PositionUpdate" Filter="Global" />
+      
+	       
+      <CustomVideo File="fart_final.mp4" ux:Name="SoundVideo" Volume="1" Width="2" Height="2" Alignment="TopLeft" Visibility="Collapsed" IsFrozen="true" />
+   
+
+</App>
+
